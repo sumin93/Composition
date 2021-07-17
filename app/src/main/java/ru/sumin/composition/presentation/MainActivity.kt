@@ -1,7 +1,8 @@
-package ru.sumin.composition
+package ru.sumin.composition.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import ru.sumin.composition.R
 
 class MainActivity : AppCompatActivity() {
 
