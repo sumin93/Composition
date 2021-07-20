@@ -1,10 +1,12 @@
 package ru.sumin.composition.domain.entity
 
-import java.io.Serializable
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class GameResult(
     val winner: Boolean,
     val countOfRightAnswers: Int,
     val countOfQuestions: Int,
     val gameSettings: GameSettings
-): Serializable
+) : Parcelable
