@@ -8,5 +8,34 @@
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="ru.sumin.composition.presentation.WelcomeFragment"
-        android:label="WelcomeFragment" />
+        android:label="WelcomeFragment" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_chooseLevelFragment"
+            app:destination="@id/chooseLevelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseLevelFragment"
+        android:name="ru.sumin.composition.presentation.ChooseLevelFragment"
+        android:label="fragment_choose_level"
+        tools:layout="@layout/fragment_choose_level" >
+        <action
+            android:id="@+id/action_chooseLevelFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="ru.sumin.composition.presentation.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_gameFinishedFragment"
+            app:destination="@id/gameFinishedFragment"
+            app:popUpTo="@id/gameFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFinishedFragment"
+        android:name="ru.sumin.composition.presentation.GameFinishedFragment"
+        android:label="fragment_game_finished"
+        tools:layout="@layout/fragment_game_finished" />
 </navigation>
